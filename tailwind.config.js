@@ -5,5 +5,5 @@ module.exports = {
     "./layouts/**/*.html",
     "./assets/css/*.css",
   ],
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 };

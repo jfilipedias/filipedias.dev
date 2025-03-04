@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
   {{ partial "head.html" .}}
-  <body>
+  <body class="mx-auto max-w-3xl overflow-x-hidden px-6 py-12 antialiased sm:py-32 md:overflow-x-visible md:py-16 flex flex-col bg-stone-50 text-stone-900 min-h-screen">
     {{ partial "header.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}

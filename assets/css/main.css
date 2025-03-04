@@ -1,2 +1,62 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--color-stone-50: #faf9f5;
+	--color-stone-100: #ecebe9;
+	--color-stone-200: #d6d4d1;
+	--color-stone-300: #c3c0bc;
+	--color-stone-400: #b0aca6;
+	--color-stone-500: #9b968f;
+	--color-stone-600: #7f7971;
+	--color-stone-700: #5e5a54;
+	--color-stone-800: #3e3b37;
+	--color-stone-900: #201f1d;
+	--color-stone-950: #100f0e;
+
+	--font-sans: 'Geist Sans', sans-serif;
+	--font-mono: 'Fira Code Variable', monospace;
+	--font-serif: 'Source Serif 4 Variable', serif;
+}
+
+@layer base {
+	h1,
+	h2,
+	h3 {
+		font-family: 'Geist Sans', sans-serif;
+		font-weight: 600;
+		color: var(--color-stone-900);
+	}
+
+	h2 {
+		font-size: var(--text-2xl);
+		font-weight: var(--font-weight-bold);
+		line-height: var(--tw-leading, var(--text-2xl--line-height));
+	}
+
+	p,
+	li {
+		font-family: 'Source Serif Pro', serif;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 32px;
+		color: var(--color-stone-900);
+	}
+
+	p a {
+		cursor: pointer;
+		font-weight: var(--font-weight-semibold);
+	  text-decoration-line: underline;
+		text-decoration-color: var(--color-stone-900);
+		text-underline-offset: 2px;
+		transition-property: color, text-decoration-color;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration:150ms
+	}
+
+	p a:hover {
+		color: var(--color-stone-600);
+		text-decoration-color: var(--color-stone-600);
+	}
+}
