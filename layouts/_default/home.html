@@ -15,11 +15,17 @@
     </p>
     <section class="mt-10">
       <h2>Últimas publicações</h2>
+      {{ $posts := where .Site.Pages "Type" "blog" }}
+      {{ $latestPosts := first 3 (sort $posts "Date" "desc") }}
       <ul>
-        {{ range first 5 .Pages "Section" "blog" }}
+        {{ range $latestPosts }}
           <li>
-            <a href="{{ .RelPermalink }}">
-              <h3>{{ .LinkTitle }}</h3>
+            <a href="{{ .Permalink }}">
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Summary }}</p>
+              <time class="font-sans text-sm text-stone-600 font-medium" datetime="{{ .Date }}">
+                {{ .Date.Format "January 2, 2006" }}
+              </time>
             </a>
           </li>
         {{ end }}
