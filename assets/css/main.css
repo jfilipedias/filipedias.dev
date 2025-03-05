@@ -15,29 +15,28 @@
 	--color-stone-900: #201f1d;
 	--color-stone-950: #100f0e;
 
-	--font-sans: 'Geist Sans', sans-serif;
+	--font-sans: 'Mona Sans', sans-serif;
 	--font-mono: 'Fira Code Variable', monospace;
-	--font-serif: 'Source Serif 4 Variable', serif;
+	--font-serif: 'Source Serif 4', serif;
 }
 
 @layer base {
 	h1,
 	h2,
 	h3 {
-		font-family: 'Geist Sans', sans-serif;
-		font-weight: 600;
+		font-family: var(--font-sans);
+		font-weight: var(--font-weight-semibold);
 		color: var(--color-stone-900);
 	}
 
 	h2 {
 		font-size: var(--text-2xl);
-		font-weight: var(--font-weight-bold);
 		line-height: var(--tw-leading, var(--text-2xl--line-height));
 	}
 
 	p,
 	li {
-		font-family: 'Source Serif Pro', serif;
+		font-family: var(--font-serif);
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 32px;
