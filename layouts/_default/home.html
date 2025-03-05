@@ -15,6 +15,15 @@
     </p>
     <section class="mt-10">
       <h2>Últimas publicações</h2>
+      <ul>
+        {{ range first 5 .Pages "Section" "blog" }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              <h3>{{ .LinkTitle }}</h3>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
     </section>
   </main>
 {{ end }}
