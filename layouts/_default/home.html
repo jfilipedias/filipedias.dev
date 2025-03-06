@@ -15,9 +15,9 @@
     </p>
     <section class="mt-10">
       <h2>Últimas publicações</h2>
-      {{ $posts := where .Site.RegularPages "Section" "blog" }}
-      {{ $latestPosts := first 3 (sort $posts "Date" "desc") }}
       <ul class="mt-5">
+        {{ $posts := where .Site.RegularPages "Type" "blog" }}
+        {{ $latestPosts := first 3 (sort $posts "Date" "desc") }}
         {{ range $latestPosts }}
           <li>
             <a href="{{ .Permalink }}">
@@ -32,6 +32,12 @@
           </li>
         {{ end }}
       </ul>
+      <a href="/blog" class="mt-5 group flex items-center font-medium">
+        Leia todas as publicações
+        <div class="ml-1 h-6 w-6 transition-transform duration-200 group-hover:translate-x-1">
+          {{ readFile  "static/icons/icon-right.svg" | safeHTML }}
+        </div>
+      </a>
     </section>
   </main>
 {{ end }}
