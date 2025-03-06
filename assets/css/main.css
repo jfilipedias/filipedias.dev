@@ -28,10 +28,10 @@
 		font-weight: var(--font-weight-semibold);
 		color: var(--color-stone-900);
 	}
-
+	
 	h2 {
-		font-size: var(--text-2xl);
-		line-height: var(--tw-leading, var(--text-2xl--line-height));
+		font-size: var(--text-3xl);
+		line-height: var(--tw-leading, var(--text-3xl--line-height));
 	}
 
 	p,
