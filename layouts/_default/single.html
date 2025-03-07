@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main class="flex-1 flex w-full flex-col">
+  <h2 class="text-3xl font-heading !mb-0 md:text-4xl">
+    {{ .Title }}
+  </h2>
+  <h3 class="text-xl font-normal mt-2">
+    {{ .Params.subtitle }}
+  </h3>
+  <hr class="border-t-hairline border-neutral-300 my-4" />
+  <time class="font-sans text-sm text-stone-700 mt-1" datetime="{{ .Date }}">
+    {{ .Date.Format "2 Jan 2006" }}
+  </time>
+  <article class="prose mt-12">
+    {{ .Content }}
+  </article>
+</main>
+{{ end }}

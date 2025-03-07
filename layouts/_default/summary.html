@@ -1,8 +1,8 @@
 <a href="{{ .Permalink }}">
   <h3>{{ .Title }}</h3>
-  <p class="text-lg text-stone-800">
-    {{ .Summary }}
-  </p>
+  <h4 class="text-lg font-normal">
+    {{ .Params.subtitle }}
+  </h4>
   <time class="font-sans text-sm text-stone-700 mt-1" datetime="{{ .Date }}">
     {{ .Date.Format "2 Jan 2006" }}
   </time>
