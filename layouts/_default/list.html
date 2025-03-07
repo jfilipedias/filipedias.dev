@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <main class="flex-1 flex w-full flex-col">
+    <h2>Blog</h2>
+    <ul class="mt-5 flex flex-col gap-4">
+      {{ range .Site.RegularPages }}
+        <li>{{ .Render "summary" }}</li>
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}
