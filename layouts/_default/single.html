@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main class="flex flex-col">
-  <h2 class="text-3xl font-heading !mb-0 md:text-4xl">
+  <h2 class="text-3xl font-heading !mb-0 lg:text-4xl">
     {{ .Title }}
   </h2>
   <h3 class="font-normal mt-1">
@@ -10,7 +10,7 @@
   <time class="font-sans text-sm text-neutral-700 mt-1" datetime="{{ .Date }}">
     {{ .Date.Format "2 Jan 2006" }}
   </time>
-  <article class="prose mt-12">
+  <article class="prose lg:prose-xl mt-12">
     {{ .Content }}
   </article>
 </main>
