@@ -1,6 +1,6 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-subtitle: ''
+description: ''
 date: '{{ .Date }}'
 draft: true
 ---
