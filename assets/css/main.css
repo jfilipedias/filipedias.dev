@@ -3,18 +3,6 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--color-stone-50: #faf9f5;
-	--color-stone-100: #ecebe9;
-	--color-stone-200: #d6d4d1;
-	--color-stone-300: #c3c0bc;
-	--color-stone-400: #b0aca6;
-	--color-stone-500: #9b968f;
-	--color-stone-600: #7f7971;
-	--color-stone-700: #5e5a54;
-	--color-stone-800: #3e3b37;
-	--color-stone-900: #201f1d;
-	--color-stone-950: #100f0e;
-
 	--font-sans: 'Mona Sans', sans-serif;
 	--font-mono: 'Source Code Pro', monospace;
 	--font-serif: 'Source Serif Pro', serif;
@@ -31,21 +19,38 @@
 	}
 	
 	h2 {
-		font-size: var(--text-3xl);
-		line-height: var(--tw-leading, var(--text-3xl--line-height));
+		font-size: var(--text-2xl);
+		line-height: var(--tw-leading, var(--text-2xl--line-height));
 	}
 
 	h3 { 
-		font-size: var(--text-xl);
-		line-height: var(--tw-leading, var(--text-xl--line-height));
+		font-size: var(--text-lg);
+		line-height: var(--tw-leading, var(--text-lg--line-height));
 	}
-
+	
 	p, li {
+		font-size: var(--text-lg);
 		font-family: var(--font-serif);
-		font-weight: 400;
-		font-size: var(--text-xl);
-	  line-height: var(--tw-leading, var(--text-xl--line-height));
+		font-weight: var(--font-weight-regular);
+	  line-height: var(--tw-leading, var(--text-lg--line-height));
 		color: var(--color-stone-900);
+	}
+	
+	@media (width >= 40rem) {
+		h2 {
+			font-size: var(--text-3xl);
+			line-height: var(--tw-leading, var(--text-3xl--line-height));
+		}
+	
+		h3 { 
+			font-size: var(--text-xl);
+			line-height: var(--tw-leading, var(--text-xl--line-height));
+		}
+
+		p, li {
+			font-size: var(--text-xl);
+			line-height: var(--tw-leading, var(--text-xl--line-height));
+		}
 	}
 
 	p a {
@@ -55,13 +60,13 @@
 		text-decoration-color: var(--color-stone-900);
 		text-underline-offset: 2px;
 		transition-property: color, text-decoration-color;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration:150ms
+		transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+		transition-duration: var(--tw-duration, var(--default-transition-duration));
 	}
 
 	p a:hover {
 		color: var(--color-stone-600);
-		text-decoration-color: var(--color-stone-600);
+		text-decoration-color: var(--color-stone-700);
 	}
 }
 
