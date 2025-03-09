@@ -11,7 +11,7 @@
 @layer base {
 	h1, h2, h3, h4 {
 		font-family: var(--font-sans);
-		color: var(--color-stone-900);
+		color: var(--color-neutral-900);
 	}
 
 	h1, h2, h3 {
@@ -33,7 +33,7 @@
 		font-family: var(--font-serif);
 		font-weight: var(--font-weight-regular);
 	  line-height: var(--tw-leading, var(--text-lg--line-height));
-		color: var(--color-stone-900);
+		color: var(--color-neutral-900);
 	}
 	
 	@media (width >= 40rem) {
@@ -55,9 +55,8 @@
 
 	p a {
 		cursor: pointer;
-		font-weight: var(--font-weight-semibold);
+		font-weight: var(--font-weight-medium);
 	  text-decoration-line: underline;
-		text-decoration-color: var(--color-stone-900);
 		text-underline-offset: 2px;
 		transition-property: color, text-decoration-color;
 		transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -65,8 +64,7 @@
 	}
 
 	p a:hover {
-		color: var(--color-stone-600);
-		text-decoration-color: var(--color-stone-700);
+		color: var(--color-neutral-600);
 	}
 }
 
