@@ -1,8 +1,10 @@
 ---
 title: Sua teck stack não importa!
 subtitle: Aprenda os fundamentos, não nos detalhes de implementação.
-date: "2024-11-02T00:00:00-03:00"
+date: 2024-11-02T00:00:00-03:00
 draft: false
+tags:
+  - code
 ---
 
 Você provavelmente já deve ter visto algum vídeo de um tech influencer compartilhando sua nova tech stack preferida. Essa stack dos sonhos conta com alta performance, ganhos de produtividade e o uso das tecnologias mais modernas, seja lá o que isso signifique. Alguns vão além e as vendem como um starter pack, contendo um exemplo, sem qualquer semelhança com uma aplicação que opera em produção. Esses starter packs costumam já estar acoplados a serviços de terceiros, como envio de e-mails, recebimento de pagamentos e provedores de hospedagem, tudo isso com a promessa de que essa tech stack irá acelerar o desenvolvimento do seu próximo projeto e te tornar um indie hacker de sucesso.

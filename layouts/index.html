@@ -20,11 +20,8 @@
           <li>{{ .Render "summary" }}</li>
         {{ end }}
       </ul>
-      <a href="/blog" class="mt-5 group flex items-center font-medium">
+      <a href="/articles" class="mt-5 flex items-center font-medium underline-offset-2 hover:underline">
         Leia todas as publicações
-        <div class="ml-1 h-6 w-6 transition-transform duration-200 group-hover:translate-x-1">
-          {{ readFile  "static/icons/icon-right.svg" | safeHTML }}
-        </div>
       </a>
     </section>
   </main>
