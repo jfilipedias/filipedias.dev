@@ -6,10 +6,10 @@
   <h3 class="font-normal mt-1">
     {{ .Params.description }}
   </h3>
-  <hr class="border-t-hairline border-neutral-300 my-3" />
-  <time class="font-sans text-sm text-neutral-700 mt-1" datetime="{{ .Date }}">
+  <time class="font-sans text-sm text-neutral-700 mt-2" datetime="{{ .Date }}">
     {{ .Date.Format "2 Jan 2006" }}
   </time>
+  <hr class="border-t-hairline border-neutral-300 mt-6" />
   <article class="prose lg:prose-xl mt-12">
     {{ .Content }}
   </article>
