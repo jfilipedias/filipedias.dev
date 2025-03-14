@@ -24,7 +24,7 @@ O pacote `time` da linguagem espera que seja informada a data mágica `Mon Jan 2
 6. **Ano**: 2006;
 7. **Desvio de fuso horário**: -0700 (-7 horas);
 
-Em resumo, sempre que formos nos referir ao mês devemos nos referia à Janeiro, ao referenciar um dia, o segundo dia do mês e assim por diante. Os possíveis valores para cada componente são:
+Em resumo, sempre que formos nos referir ao mês devemos nos referia à Janeiro, ao referenciar um dia, o segundo dia do mês e assim por diante. Os possíveis valores para alguns componentes são:
 
 - **Dia da semana**: `Mon` ou `Monday`;
 - **Dia do mês**: `2`, `_2` ou `02`;
@@ -36,5 +36,29 @@ Em resumo, sempre que formos nos referir ao mês devemos nos referia à Janeiro,
 - **Segundos**: `5`, `05`;
 
 ## Seguindo padrões
+
+Alguns formatos de data e hora são amplamente utilizados, como o `RFC3339`, e, tendo em vista a necessidade de simplificar a formatação da data e hora, a linguagem Go possuí alguns valores pré-definidos, como:
+
+- **ANSIC**: `"Mon Jan _2 15:04:05 2006"`
+- **UnixDate**: `"Mon Jan _2 15:04:05 MST 2006"`
+- **RFC822**: `"02 Jan 06 15:04 MST"`
+- **RFC3339**: `"2006-01-02T15:04:05Z07:00"`
+- **DateTime**: `"2006-01-02 15:04:05"`
+- **DateOnly**: `"2006-01-02"`
+- **TimeOnly**: `"15:04:05"`
+
+Desse modo, é possível utilizar tanto padrão já estabelecidos, como definir o seu próprio formato:
+
+```go
+t := time.Now()
+
+// Usando formatos pré-definidos
+fmt.Println(t.Format(time.RFC3339)) 
+
+// Criando um novo formato com base na data mágica
+fmt.Println(t.Format("02/01/2006")) 
+```
+
+## Conclusão
 
 
