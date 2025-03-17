@@ -35,6 +35,8 @@ Em resumo, sempre que formos nos referir ao mês devemos nos referia à Janeiro,
 - **Minutos**: `4`, `04`;
 - **Segundos**: `5`, `05`;
 
+A lista completa de valores pode ser consultada na [documentação](https://pkg.go.dev/time#Layout "Layouts do pacote time") do pacote `time`.
+
 ## Seguindo padrões
 
 Alguns formatos de data e hora são amplamente utilizados, como o `RFC3339`, e, tendo em vista a necessidade de simplificar a formatação da data e hora, a linguagem Go possuí alguns valores pré-definidos, como:
@@ -61,4 +63,6 @@ fmt.Println(t.Format("02/01/2006"))
 
 ## Conclusão
 
+A formatação de datas com na linguagem Go segue uma abordagem não convencional, contudo, uma vez que entendemos como a data mágica é estruturada, a ela se torna simples e explícita. 
 
+Além disso, a linguagem possui alguns [layouts pré-definidos](https://pkg.go.dev/time#Layout "Layouts do pacote time") que facilitam o processo de formatação de datas seguindo padrões já estabelecidos pela industria, como o caso da `RFC3339`, um perfil do formato `ISO 8601` comumente usado em APIs RESTful por meio da serialização dos dados no formato JSON.
