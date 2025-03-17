@@ -72,15 +72,23 @@
 	font-weight: var(--font-weight-semibold);
 }
 
-.prose code {
-	font-weight: var(--font-weight-medium);
-	background-color:  color-mix(in oklab, var(--color-neutral-200) 75%, transparent);
+.prose :not(pre) > code {
+	font-weight: var(--font-weight-regular);
+	background-color:  color-mix(in oklab, var(--color-neutral-200) 40%, transparent);
 	padding-inline: calc(var(--spacing) * 1.5);
 	border-radius: 0.25rem;
 }
 
-.prose code::before, .prose code::after {
+.prose :not(pre) > code::before, .prose :not(pre) > code::after {
 	content: '';
+}
+
+.prose pre {
+	background-color:  color-mix(in oklab, var(--color-neutral-200) 15%, transparent) !important;
+	border-width: 1px;
+	border-color: var(--color-neutral-300);
+	font-size: var(--text-base);
+	line-height: var(--tw-leading, var(--text-base--line-height));
 }
 
 /* mona-sans-latin-wght-normal */
