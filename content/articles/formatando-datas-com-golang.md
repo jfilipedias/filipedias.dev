@@ -1,8 +1,8 @@
 ---
 title: Formatando datas com Golang
 description: Entenda como utilizar a data mágica ao seu favor.
-date: 2025-03-09T18:37:16-03:00
-draft: true
+date: 2025-03-16T23:15:00-03:00
+draft: false
 tags:
  - coding
  - golang
@@ -65,4 +65,4 @@ fmt.Println(t.Format("02/01/2006"))
 
 A formatação de datas na linguagem Go segue uma abordagem não convencional. Contudo, uma vez que entendemos como a data mágica é estruturada, ela se torna simples e explícita. 
 
-Além disso, a linguagem possui alguns [layouts pré-definidos](https://pkg.go.dev/time#Layout "Layouts do pacote time") que facilitam o processo de formatação de datas, seguindo padrões já estabelecidos pela indústria, como o caso da `RFC3339`, um perfil do formato `ISO 8601` comumente usado em APIs RESTful por meio da serialização dos dados no formato JSON.
+Além disso, a linguagem possui alguns [layouts pré-definidos](https://pkg.go.dev/time#Layout "Layouts do pacote time") que facilitam o processo de formatação de datas, como o caso da `RFC3339`, um perfil do formato `ISO 8601` comumente usado em APIs RESTful por meio da serialização dos dados no formato JSON.
