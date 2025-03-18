@@ -1,8 +1,16 @@
-<header class="mb-16 flex items-start justify-between">
-  <a href="/" title="Início" class="text-2xl font-semibold">
-    Filipe Dias
-  </a>
-  <a href="/articles" class="font-medium underline-offset-2 hover:underline">
-    Artigos
-  </a>
+<header class="mb-16 flex items-baseline">
+  <nav class="flex items-baseline w-full">
+    <a href="/" class="text-2xl font-semibold">
+      Filipe Dias
+    </a>
+    <ul class="ml-auto">
+      {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .Page.RelPermalink }}"  class="font-medium font-sans text-lg underline-offset-2 hover:underline">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
 </header>

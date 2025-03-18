@@ -1,0 +1,10 @@
+- id: about
+  translation: Hello, my name is Filipe. I'm a software developer and currently focus on web application development. I like technologies like Go, and here I share a bit about code and other ideas.
+- id: social_links
+  translation: "You can also find me on <a href='https://github.com/jfilipedias'>GitHub</a> and <a href='https://linkedin.com/in/jfilipedias'>LinkedIn</a>."
+- id: latest_articles
+  translation: Latest publications
+- id: read_more
+  translation: Read all publications
+- id: articles
+  translation: Articles

@@ -1,27 +1,16 @@
 {{ define "main" }}
   <main class="flex-1 flex w-full flex-col">
-    <p>
-      Olá, me chamo Filipe. Sou desenvolvedor de software e atualmente foco em desenvolvimento de aplicações web.
-      Gosto de tecnologias simples como Go e aqui compartilho um pouco sobre código e outras ideias.
-    </p>
-    <p class="mt-5">
-      Você também pode me encontrar no 
-      <a href="https://github.com/jfilipedias" title="perfil no GitHub">
-        GitHub
-      </a> e 
-      <a href="https://linkedin.com/in/jfilipedias" title="perfil no LinkedIn">
-        LinkedIn
-      </a>.
-    </p>
+    <p>{{ i18n "about" }}</p>
+    <p class="mt-5">{{ i18n "social_links" | safeHTML }}</p>
     <section class="mt-10">
-      <h2>Últimas publicações</h2>
+      <h2>{{ i18n "latest_articles" }}</h2>
       <ul class="mt-5 flex flex-col gap-4">
         {{ range first 3 .Site.RegularPages }}
           <li>{{ .Render "summary" }}</li>
         {{ end }}
       </ul>
       <a href="/articles" class="mt-5 flex items-center font-medium underline-offset-2 hover:underline">
-        Leia todas as publicações
+        {{ i18n "read_more" }}
       </a>
     </section>
   </main>
