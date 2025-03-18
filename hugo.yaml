@@ -1,6 +1,31 @@
 baseURL: https://filipedias.dev/
-languageCode: pt-BR
 title: Filipe Dias
+defaultContentLanguage: pt-BR
+defaultContentLanguageInSubdir: true
+disableDefaultLanguageRedirect: false
+languages:
+  pt-BR:
+    contentDir: content/portugues
+    languageCode: pt-BR 
+    languageName: Português
+    languageDirection: ltr
+    menus:
+     main:
+      - name: Artigos
+        pageRef: /articles
+        weight: 10
+    weight: 1
+  en-US:
+    contentDir: content/english
+    languageCode: en-US
+    languageName: English
+    languageDirection: ltr
+    menus:
+     main:
+      - name: Articles
+        pageRef: /articles
+        weight: 10
+    weight: 2
 build:
   buildStats:
     enable: true

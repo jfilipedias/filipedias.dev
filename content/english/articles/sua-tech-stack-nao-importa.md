@@ -1,6 +1,7 @@
 ---
-title: Sua teck stack não importa!
-description: Aprenda os fundamentos, não nos detalhes de implementação.
+
+title: Your stack doesn't matter!
+description: Learn the foundations, not the implementation details.
 date: 2024-11-02T00:00:00-03:00
 draft: false
 tags:

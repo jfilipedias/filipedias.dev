@@ -7,7 +7,7 @@
     {{ .Params.description }}
   </h3>
   <time class="font-sans text-sm text-neutral-700 mt-2" datetime="{{ .Date }}">
-    {{ .Date.Format "2 Jan 2006" }}
+    {{ .Date | time.Format ":date_medium" }}
   </time>
   <hr class="border-t-hairline border-neutral-300 mt-6" />
   <article class="prose mt-12">
