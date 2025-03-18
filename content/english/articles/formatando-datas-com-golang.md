@@ -9,9 +9,9 @@ tags:
  - golang
 ---
 
-Algo que eu gosto na linguagem Go é a simplicidade adotada como filosofia de design e, apesar de não parecer à primeira vista, isso pode ser evidenciado na forma como a linguagem formata data e hora.
+Something I like about the Go language is the simplicity adopted as a design philosophy and, although it may not seem like it at first glance, this can be seen in the way the language formats date and time.
 
-Em linguagens mais populares, como Java e C#, é comum definir o formato por meio de um template utilizando identificadores, como `dd` para o dia e `yyyy` para o ano. No entanto, Go usa uma abordagem diferente, seguinto o princípio _"What You See Is What You Get"_, ou seja, "O que você vê é o que você obtém".
+In more popular languages, such as Java and C#, it's common to define the format via a template using identifiers, such as `dd` for the day and `yyyy` for the year. However, Go uses a different approach.
 
 ## A kind of magic
 

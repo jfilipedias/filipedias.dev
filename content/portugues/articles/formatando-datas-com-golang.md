@@ -10,7 +10,7 @@ tags:
 
 Algo que eu gosto na linguagem Go é a simplicidade adotada como filosofia de design e, apesar de não parecer à primeira vista, isso pode ser evidenciado na forma como a linguagem formata data e hora.
 
-Em linguagens mais populares, como Java e C#, é comum definir o formato por meio de um template utilizando identificadores, como `dd` para o dia e `yyyy` para o ano. No entanto, Go usa uma abordagem diferente, seguinto o princípio _"What You See Is What You Get"_, ou seja, "O que você vê é o que você obtém".
+Em linguagens mais populares, como Java e C#, é comum definir o formato por meio de um template utilizando identificadores, como `dd` para o dia e `yyyy` para o ano. No entanto, Go usa uma abordagem diferente.
 
 ## A kind of magic
 
