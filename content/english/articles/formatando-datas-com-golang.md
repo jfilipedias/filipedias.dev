@@ -15,32 +15,32 @@ In more popular languages, such as Java and C#, it's common to define the format
 
 ## A kind of magic
 
-O método `time.Format` espera que seja informada a data mágica `Mon Jan 2 15:04:05 -0700 MST 2006` em um dos diferentes layouts possíveis. Mas o que tem de mágico nessa data? Bom, a brincadeira com o nome se dá pela ordem dos elementos que compõem a data de acordo com o padrão americano e seu respectivo valor:
+The method `time.Format` expect you enter the magic date `Mon Jan 2 15:04:05 -0700 MST 2006` in one of the possible formats. But what's so magic about this date? Well, the joke with the name comes form the orders of the elements that compose the date according to the American standard and their respective value:
 
-1. **Mês**: Jan, (Janeiro ou mês 1);
-2. **Dia**: 2;
-3. **Horas**: 15, na notação de 24 horas (3pm);
-4. **Minutos**: 04;
-5. **Segundos**: 05;
-6. **Ano**: 2006;
-7. **Desvio de fuso horário**: -0700 (-7 horas);
+1. **Month**: Jan, (January or month 1);
+2. **Day**: 2;
+3. **Hour**: 15, in 24-hour notation (3pm);
+4. **Minute**: 04;
+5. **Second**: 05;
+6. **Year**: 2006;
+7. **Time zone offset**: -0700 (-7 hours);
 
-Em resumo, sempre que formos nos referir ao mês, devemos nos referia a Janeiro; ao referenciarmos um dia, devemos nos referir ao segundo dia do mês, e assim por diante. Os possíveis valores para alguns componentes são:
+In short, whenever we refer to the month, we should refer to January; when rever to a day, we should refer to the second day of the month, and so on. The possible values for some components are:
 
-- **Dia da semana**: `Mon` ou `Monday`;
-- **Dia do mês**: `2`, `_2` ou `02`;
-- **Dia do ano**: `__2` ou `002`;
-- **Mês**: `Jan`, `January`, `01` ou `1`;
-- **Ano**: `2006`;
-- **Hora**: `15`, `3` ou `03`;
-- **Minutos**: `4`, `04`;
-- **Segundos**: `5`, `05`;
+- **Week day**: `Mon` or `Monday`;
+- **Month day**: `2`, `_2` or `02`;
+- **Year day**: `__2` or `002`;
+- **Month**: `Jan`, `January`, `01` or `1`;
+- **Year**: `2006`;
+- **Hour**: `15`, `3` or `03`;
+- **Minute**: `4`, `04`;
+- **Second**: `5`, `05`;
 
-A lista completa de valores pode ser consultada na [documentação](https://pkg.go.dev/time#Layout "Layouts do pacote time") do pacote `time`.
+The complete list of values can be found on the [documentation](https://pkg.go.dev/time#Layout "Time package layouts") of the `time`package.
 
-## Seguindo padrões
+## Following standards
 
-Alguns formatos de data e hora são amplamente utilizados, como o `RFC3339` e, tendo em vista a necessidade de simplificar a formatação da data e hora, a linguagem Go possui alguns valores pré-definidos, como:
+Some date and time formats are widely used, such as `RFC3339`, wich is a profile of the `ISO 8601` format. Given the need to simplify the date and formatting, the Go language provides some predefined values, such as:
 
 - **ANSIC**: `"Mon Jan _2 15:04:05 2006"`
 - **UnixDate**: `"Mon Jan _2 15:04:05 MST 2006"`
@@ -50,7 +50,7 @@ Alguns formatos de data e hora são amplamente utilizados, como o `RFC3339` e, t
 - **DateOnly**: `"2006-01-02"`
 - **TimeOnly**: `"15:04:05"`
 
-Desse modo, é possível utilizar tanto formatos já estabelecidos, como definir o seu próprio formato:
+In this way, you can use both established formats and define your own:
 
 ```go
 t := time.Now()
@@ -62,8 +62,6 @@ fmt.Println(t.Format(time.RFC3339))
 fmt.Println(t.Format("02/01/2006")) 
 ```
 
-## Conclusão
+## Conclusion
 
-A formatação de datas na linguagem Go segue uma abordagem não convencional. Contudo, uma vez que entendemos como a data mágica é estruturada, ela se torna simples e explícita. 
-
-Além disso, a linguagem possui alguns [layouts pré-definidos](https://pkg.go.dev/time#Layout "Layouts do pacote time") que facilitam o processo de formatação de datas, como o caso da `RFC3339`, um perfil do formato `ISO 8601` comumente usado em APIs RESTful por meio da serialização dos dados no formato JSON.
+Date formatting in the Go languagem doesn't follow a conventional approach. However, once we understand how the magic date is structured, it becomes simple and explicit. Additionaly, the language has some [predefined leyouts](https://pkg.go.dev/time#Layout "Time package layouts") that make the date formatting process esier, shuch as `RFC3339`.  
