@@ -12,8 +12,11 @@ languages:
     menus:
      main:
       - name: Artigos
-        pageRef: /articles
+        url: /articles
         weight: 10
+      - name: English
+        url: /en
+        weight: 20
     weight: 1
   en:
     contentDir: content/english
@@ -23,8 +26,11 @@ languages:
     menus:
      main:
       - name: Articles
-        pageRef: /articles
+        url: /articles
         weight: 10
+      - name: Português
+        url: /
+        weight: 20
     weight: 2
 build:
   buildStats:

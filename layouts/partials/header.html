@@ -3,10 +3,10 @@
     <a href="/" class="text-2xl font-semibold">
       Filipe Dias
     </a>
-    <ul class="ml-auto">
+    <ul class="flex gap-5 ml-auto">
       {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{ .Page.RelPermalink }}"  class="font-medium font-sans text-lg underline-offset-2 hover:underline">
+        <li class="font-medium font-sans text-lg underline-offset-2 hover:underline">
+          <a href="{{ .URL }}">
             {{ .Name }}
           </a>
         </li>
