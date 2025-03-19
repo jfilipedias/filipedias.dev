@@ -6,9 +6,27 @@
   <h3 class="font-normal mt-1">
     {{ .Params.description }}
   </h3>
-  <time class="font-sans text-sm text-neutral-700 mt-2" datetime="{{ .Date }}">
-    {{ .Date | time.Format ":date_medium" }}
-  </time>
+  <div class="flex items-baseline mt-2 gap-5">
+    <time class="font-sans text-sm text-neutral-700" datetime="{{ .Date }}">
+      {{ .Date | time.Format ":date_medium" }}
+    </time>
+    {{ if .IsTranslated }}
+      <div class="inline-flex gap-1.5">
+        <span class="font-sans text-sm text-neutral-700">
+          {{ i18n "single_translations" }}
+        </span>
+        <ul class="flex gap-3 items-start">
+          {{ range .Translations }}
+            <li class="font-sans font-medium text-sm underline">
+              <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">
+                {{ .Language.LanguageName }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
   <hr class="border-t-hairline border-neutral-300 mt-6" />
   <article class="prose mt-12">
     {{ .Content }}

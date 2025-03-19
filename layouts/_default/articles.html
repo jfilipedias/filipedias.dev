@@ -1,6 +1,6 @@
 {{ define "main" }}
   <main class="flex-1 flex w-full flex-col">
-    <h2>{{ i18n "articles" }}</h2>
+    <h2>{{ i18n "articles_title" }}</h2>
     <ul class="mt-5 flex flex-col gap-4">
       {{ range .Site.RegularPages }}
         <li>{{ .Render "summary" }}</li>

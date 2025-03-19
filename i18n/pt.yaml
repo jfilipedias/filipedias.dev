@@ -1,10 +1,12 @@
-- id: about
+- id: index_about
   translation: Olá, me chamo Filipe. Sou desenvolvedor de software e atualmente foco em desenvolvimento de aplicações web. Gosto de tecnologias, como Go, e aqui compartilho um pouco sobre código e outras ideias.
-- id: social_links
+- id: index_social_links
   translation: "Você também pode me encontrar no <a href='https://github.com/jfilipedias'>GitHub</a> e <a href='https://linkedin.com/in/jfilipedias'>LinkedIn</a>."
-- id: latest_articles
+- id: index_latest_articles
   translation: Últimas publicações
-- id: read_more
+- id: index_read_more
   translation: Leia todas as publicações
-- id: articles
+- id: articles_title
   translation: Artigos
+- id: single_translations
+  translation: "Traduções:"

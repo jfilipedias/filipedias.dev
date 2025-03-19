@@ -1,16 +1,16 @@
 {{ define "main" }}
   <main class="flex-1 flex w-full flex-col">
-    <p>{{ i18n "about" }}</p>
-    <p class="mt-5">{{ i18n "social_links" | safeHTML }}</p>
+    <p>{{ i18n "index_about" }}</p>
+    <p class="mt-5">{{ i18n "index_social_links" | safeHTML }}</p>
     <section class="mt-10">
-      <h2>{{ i18n "latest_articles" }}</h2>
+      <h2>{{ i18n "index_latest_articles" }}</h2>
       <ul class="mt-5 flex flex-col gap-4">
         {{ range first 3 .Site.RegularPages }}
           <li>{{ .Render "summary" }}</li>
         {{ end }}
       </ul>
       <a href="/articles" class="mt-5 flex items-center font-medium underline-offset-2 hover:underline">
-        {{ i18n "read_more" }}
+        {{ i18n "index_read_more" }}
       </a>
     </section>
   </main>
