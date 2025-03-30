@@ -1,7 +1,7 @@
 ---
 title: Formatando datas com Golang
 description: Entenda como utilizar a data mágica ao seu favor.
-date: 2025-03-16T23:15:00-03:00
+date: 2025-03-30T16:10:00-03:00
 draft: false
 tags:
  - coding

@@ -2,7 +2,7 @@
 slug: formatting-dates-with-golang
 title: Formatting dates with Golang
 description: Understand how to use the magic date to your advantage.
-date: 2025-03-16T23:15:00-03:00
+date: 2025-03-30T16:10:00-03:00
 draft: false
 tags:
  - coding
